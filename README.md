@@ -21,10 +21,9 @@ Before running the application, make sure you have Docker Desktop installed on y
 To run the application, follow these steps:
 
 1. Clone the repository to your local machine.
-
 2. Navigate to the project root directory in your terminal.
-
-3. Build the Docker images and start the services using Docker Compose:
+3. Make sure the ports 8080 and 3307 are available.
+4. Build the Docker images and start the services using Docker Compose:
 
     ```bash
     docker-compose up -d --build

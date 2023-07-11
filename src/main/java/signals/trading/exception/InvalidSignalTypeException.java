@@ -1,4 +1,4 @@
-package signals.trading.trading.exception;
+package signals.trading.exception;
 
 public class InvalidSignalTypeException extends RuntimeException {
     public InvalidSignalTypeException(String message) {

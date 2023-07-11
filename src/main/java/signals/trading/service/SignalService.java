@@ -1,18 +1,18 @@
-package signals.trading.trading.service;
+package signals.trading.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import signals.trading.trading.algo.Algo;
-import signals.trading.trading.exception.InvalidSignalTypeException;
-import signals.trading.trading.model.SignalConfiguration;
-import signals.trading.trading.repository.SignalConfigurationRepository;
+import signals.trading.algo.Algo;
+import signals.trading.repository.SignalConfigurationRepository;
+import signals.trading.exception.InvalidSignalTypeException;
+import signals.trading.model.SignalConfiguration;
 
 @Service
 @RequiredArgsConstructor
 public class SignalService {
 
     private final SignalConfigurationRepository signalConfigurationRepository;
-    private final ConfigurableSignalProcessor signalProcessor = new ConfigurableSignalProcessor();
+    private final ConfigurableSignalProcessor signalProcessor;
 
     public void processSignal(Integer signalType) {
         if (signalType == null) {

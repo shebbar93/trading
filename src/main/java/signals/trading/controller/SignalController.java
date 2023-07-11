@@ -1,10 +1,10 @@
-package signals.trading.trading.controller;
+package signals.trading.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import signals.trading.trading.service.SignalService;
+import signals.trading.service.SignalService;
 
 @RestController
 @RequestMapping("/api/signal")
