@@ -1,4 +1,4 @@
-package signals.trading.trading.model;
+package signals.trading.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

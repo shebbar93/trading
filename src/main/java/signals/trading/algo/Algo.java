@@ -1,4 +1,4 @@
-package signals.trading.trading.algo;
+package signals.trading.algo;
 
 
 public class Algo {
