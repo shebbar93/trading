@@ -2,11 +2,12 @@
 
 This is a Spring Boot application that acts as a service for handling trading signals. It receives trading signals via an HTTP API and processes them based on pre-configured steps. The steps for each signal type are stored in a MySQL database and can be easily updated or extended.
 
-The reasoning behind considering this approach is explained here
-[Reason](Why.md)
+The reasoning behind considering this approach is explained here ➡️ [Reason](Why.md)
 
 ![Example Image](diagram.png)
-
+```bash
+    Please ignore the minor typo of "required" being misspelled in the diagram.
+```
 ## Requirements
 
 - Java 11
@@ -25,11 +26,11 @@ The reasoning behind considering this approach is explained here
 3. ~~Write unit tests for service and integration tests for the application~~ - Done
 4. ~~Docker-compose the application with MySQL and Springboot application~~ - Done
 5. ~~Support fot the new signals through migration~~ - Done
-6. Run test before the migration happens - todo
+6. Run tests for the sql scripts before the migration happens - todo
 7. Support for github actions to merge the branch to master/main only when tests are successful - todo
 8. Provide basic security - todo
 9. Follow Hexagonal clean code architecture - todo
-10. Add caching instead of Database call - todo
+10. Add caching to avoid multiple Database call - todo
 ## Running the Application
 
 Before running the application, make sure you have Docker Desktop installed on your machine. The application is packaged as a Docker image and uses Docker Compose to run together with a MySQL database.
