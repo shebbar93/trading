@@ -6,7 +6,9 @@ The reasoning behind considering this approach is explained here
 [Reason](Why.md)
 
 ![Example Image](diagram.png)
-
+```bash
+    Please ignore the minor typo of "required" being misspelled in the diagram.
+```
 ## Requirements
 
 - Java 11
@@ -29,7 +31,7 @@ The reasoning behind considering this approach is explained here
 7. Support for github actions to merge the branch to master/main only when tests are successful - todo
 8. Provide basic security - todo
 9. Follow Hexagonal clean code architecture - todo
-10. Add caching instead of Database call - todo
+10. Add caching to avoid multiple Database call - todo
 ## Running the Application
 
 Before running the application, make sure you have Docker Desktop installed on your machine. The application is packaged as a Docker image and uses Docker Compose to run together with a MySQL database.
