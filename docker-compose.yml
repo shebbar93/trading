@@ -10,9 +10,22 @@ services:
     depends_on:
       - mysql
   mysql:
-    image: mysql:5.7
+    image: mysql:latest
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=trading_signals_service
     command: --port=3307
     container_name: trading-signal
+  migration:
+    build:
+      context: ./
+      dockerfile: Dockerfile-flyway-migration
+    command: migrate
+    depends_on:
+      - mysql
+    environment:
+      - FLYWAY_URL=jdbc:mysql://mysql:3307/trading_signals_service
+      - FLYWAY_USER=root
+      - FLYWAY_PASSWORD=password
+      - FLYWAY_BASELINE_ON_MIGRATE=true
+      - FLYWAY_BASELINE_VERSION=0
